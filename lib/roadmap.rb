@@ -8,4 +8,5 @@ module Roadmap
     response = self.class.get(api_url("checkpoints/#{checkpoint_id}"), headers: { "authorization" => @auth_token })
     @checkpoints = JSON.parse(response.body, symbolize_names: true)
   end
+
 end
